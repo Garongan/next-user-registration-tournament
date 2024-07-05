@@ -2,19 +2,24 @@
 
 import "./wave.css";
 import {useEffect, useState} from "react";
+import Image from "next/image";
 
 export default function Wave() {
 
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        if (document.readyState === "complete"){
+        if (document.readyState === "complete") {
             setIsLoading(false);
         }
     }, [])
 
     return (
         <>
+            <Image
+                className={`${isLoading ? 'opacity-0' : 'opacity-75'} z-10 transition-all duration-300 absolute sm:-left-24 sm:-bottom-24 -left-12 -bottom-12 vertical-wave w-44 sm:w-96`}
+                src="/cute-cat.png" alt="a cute cat"
+                width={500} height={500}/>
             <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +29,7 @@ export default function Wave() {
                 width="100%"
                 viewBox="0 0 1600 900"
                 preserveAspectRatio="xMidYMax slice"
-                className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-all duration-300`}
+                className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-all duration-300 h-1/2 z-0`}
                 style={{
                     position: "absolute",
                     bottom: 0,
