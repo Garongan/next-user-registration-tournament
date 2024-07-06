@@ -17,7 +17,7 @@ export default function Wave() {
     return (
         <>
             <Image
-                className={`${isLoading ? 'opacity-0' : 'opacity-75'} z-0 transition-all duration-300 absolute sm:-left-32 sm:-bottom-28 -left-24 -bottom-20 vertical-wave w-full sm:w-2/5`}
+                className={`${isLoading ? 'opacity-0' : 'opacity-50'} z-0 transition-all duration-300 absolute sm:-left-32 sm:-bottom-28 -left-24 -bottom-20 vertical-wave w-full sm:w-2/5`}
                 src="/cute-cat.png" alt="a cute cat"
                 width={500} height={500}/>
             <svg

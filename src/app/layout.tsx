@@ -18,19 +18,22 @@ export default function RootLayout(
 ) {
     return (
         <html lang="en">
-        <body className={`${inter.className} min-h-screen container mx-auto p-4 sm:p-8`}>
+        <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className="flex flex-col">
-                <div className="z-10">
+            <main className="relative min-h-screen container mx-auto p-4 sm:p-8">
+                <div className="relative z-50">
                     <CustomNavbar/>
+                    <div className="py-10">
+                        {children}
+                    </div>
                 </div>
-                {children}
-                <div className="overflow-hidden w-full h-full absolute bottom-0 left-0">
+                <div className="overflow-hidden w-full h-full z-10 absolute bottom-0 left-0">
                     <Wave/>
                 </div>
             </main>
         </ThemeProvider>
         </body>
         </html>
-    );
+    )
+        ;
 }

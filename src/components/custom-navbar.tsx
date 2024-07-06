@@ -9,7 +9,7 @@ import {ModeToggle} from "@/components/mode-toggle";
 export default function CustomNavbar() {
     return (
         <nav className="flex justify-between items-center">
-            <p className="font-bold text-xl">Your Company</p>
+            <Link href={"/"}><p className="font-bold text-xl hover:cursor-pointer">Your Company</p></Link>
             <div className="flex gap-2 items-center">
                 <ul className="hidden sm:flex sm:gap-2">
                     <li>
