@@ -17,7 +17,7 @@ export default function Wave() {
     return (
         <>
             <Image
-                className={`${isLoading ? 'opacity-0' : 'opacity-75'} z-10 transition-all duration-300 absolute sm:-left-24 sm:-bottom-24 -left-12 -bottom-12 vertical-wave w-44 sm:w-96`}
+                className={`${isLoading ? 'opacity-0' : 'opacity-75'} z-0 transition-all duration-300 absolute sm:-left-32 sm:-bottom-28 -left-24 -bottom-20 vertical-wave w-full sm:w-2/5`}
                 src="/cute-cat.png" alt="a cute cat"
                 width={500} height={500}/>
             <svg
@@ -29,7 +29,7 @@ export default function Wave() {
                 width="100%"
                 viewBox="0 0 1600 900"
                 preserveAspectRatio="xMidYMax slice"
-                className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-all duration-300 h-1/2 z-0`}
+                className={`${isLoading ? 'opacity-0' : 'opacity-100'} transition-all duration-300 h-1/2 z-10`}
                 style={{
                     position: "absolute",
                     bottom: 0,
@@ -40,7 +40,7 @@ export default function Wave() {
             >
                 <defs>
                     <linearGradient id="bg">
-                        <stop offset="20%" style={{stopColor: "rgba(255, 0, 132, 0.07)"}}/>
+                        <stop offset="20%" style={{stopColor: "rgba(255, 0, 132, 0.3)"}}/>
                         <stop offset="50%" style={{stopColor: "rgba(58, 12, 163, 0.7)"}}/>
                         <stop offset="80%" style={{stopColor: "rgba(0, 255, 255, 0.3)"}}/>
                     </linearGradient>
