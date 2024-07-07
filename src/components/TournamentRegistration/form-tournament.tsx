@@ -3,20 +3,14 @@
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
-import {Form, FormItem, FormLabel} from "@/components/ui/form";
+import {Form, FormLabel} from "@/components/ui/form";
 import {Button} from "@/components/ui/button";
 import React from "react";
 import TeamNameFormField from "@/components/Form/team-name-form-field";
-import {Separator} from "@/components/ui/separator";
 import NameFormField from "@/components/Form/name-form-field";
 import PhoneFormField from "@/components/Form/phone-form-field";
 import GenderFormField from "@/components/Form/gender-form-field";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
 
 
 const formSchema = z.object({

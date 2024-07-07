@@ -13,7 +13,7 @@ pnpm dev
 # or
 bun dev
 ```
-Second please create the database named "user_registration_tournament_db" with postgres or see the env.example for the database configuration
+## Fire up the api by following this link [go-user-registration-api](https://github.com/Garongan/go-user-registration-tournament-api)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
