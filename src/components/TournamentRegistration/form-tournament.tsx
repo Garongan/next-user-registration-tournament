@@ -53,7 +53,7 @@ export default function FormTournament() {
         <div className="grid sm:grid-cols-2">
             <h1 className="sm:text-2xl text-lg font-bold z-10">Tournament Registration</h1>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 pt-5 sm:pt-0">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 pt-5 sm:pt-0 pb-48">
                     <TeamNameFormField form={form}/>
                         <Accordion type="single" defaultValue="captain">
                             {/* for captain */}
