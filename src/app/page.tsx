@@ -7,7 +7,7 @@ export default function Main() {
     return (
         <div>
             <FormTournament/>
-            <AlreadyRegister/>
+            {/*<AlreadyRegister/>*/}
         </div>
     );
 }
