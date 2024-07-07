@@ -3,9 +3,8 @@
 import {z} from "zod"
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Form} from "@/components/ui/form";
 import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
 import React from "react";
 import Link from "next/link";
 import UsernameFormField from "@/components/Form/username-form-field";

@@ -1,18 +1,21 @@
-"use client"
-
-import PropTypes from "prop-types";
 import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import React from "react";
 
-export default function NameFormField(form: any){
+interface NameFormFieldProps {
+    form: any;
+    fieldName: string;
+    label: string;
+}
+
+const NameFormField: React.FC<NameFormFieldProps> = ({form, fieldName, label}) => {
     return (
         <FormField
             control={form.control}
-            name="name"
+            name={fieldName}
             render={({field}) => (
                 <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{label}</FormLabel>
                     <FormControl>
                         <Input type="text" placeholder="name" {...field} />
                     </FormControl>
@@ -23,6 +26,4 @@ export default function NameFormField(form: any){
     )
 }
 
-NameFormField.propTypes = {
-    form: PropTypes.object.isRequired
-}
+export default NameFormField;

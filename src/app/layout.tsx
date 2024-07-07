@@ -20,8 +20,8 @@ export default function RootLayout(
         <html lang="en">
         <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className="relative min-h-screen container mx-auto p-4 sm:p-8">
-                <div className="relative z-50">
+            <main className="relative min-h-screen">
+                <div className="relative z-50 container mx-auto p-4 sm:p-8">
                     <CustomNavbar/>
                     <div className="py-10">
                         {children}

@@ -1,18 +1,20 @@
-"use client"
-
-import PropTypes from "prop-types";
 import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import React from "react";
 
-export default function PhoneFormField(form: any){
+interface PhoneFormFieldProps {
+    form: any,
+    fieldName: string,
+    label: string
+}
+const PhoneFormField: React.FC<PhoneFormFieldProps> = ({form, fieldName, label}) => {
     return (
         <FormField
             control={form.control}
-            name="phone"
+            name={fieldName}
             render={({field}) => (
                 <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{label}</FormLabel>
                     <FormControl>
                         <Input type="text" placeholder="phone number" {...field} />
                     </FormControl>
@@ -23,6 +25,4 @@ export default function PhoneFormField(form: any){
     )
 }
 
-PhoneFormField.propTypes = {
-    form: PropTypes.object.isRequired
-}
+export default PhoneFormField;

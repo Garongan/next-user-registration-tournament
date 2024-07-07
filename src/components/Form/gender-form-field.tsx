@@ -1,18 +1,21 @@
-"use client"
-
-import PropTypes from "prop-types";
 import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import React from "react";
 
-export default function GenderFormField(form: any){
-    return(
+interface GenderFormFieldProps {
+    form: any
+    fieldName: string
+    label: string
+}
+
+const GenderFormField: React.FC<GenderFormFieldProps> = ({form, fieldName, label}) => {
+    return (
         <FormField
             control={form.control}
-            name="gender"
+            name={fieldName}
             render={({field}) => (
                 <FormItem>
-                    <FormLabel>Gender</FormLabel>
+                    <FormLabel>{label}</FormLabel>
                     <FormControl>
                         <RadioGroup
                             onValueChange={field.onChange}
@@ -41,7 +44,4 @@ export default function GenderFormField(form: any){
         />
     )
 }
-
-GenderFormField.propTypes = {
-    form: PropTypes.object.isRequired
-}
+export default GenderFormField
