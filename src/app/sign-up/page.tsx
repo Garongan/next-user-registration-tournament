@@ -14,7 +14,7 @@ import NameFormField from "@/components/Form/name-form-field";
 
 const formSchema = z.object({
     name: z.string().min(3).max(50).regex(/^[a-zA-Z\s]+$/i, "Name should only use alphabet and space"),
-    phone: z.string().min(7).max(14).regex(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, "Phone number should be valid"),
+    phone: z.string().min(7).max(14).regex(/^\+[0-9]\d{1,14}$/, "Phone number should be valid"),
     username: z.string().min(6).max(15).regex(/^[a-zA-Z0-9]+$/i, "Username should only use alphabet and numbers"),
     password: z.string().min(8).max(20)
 })

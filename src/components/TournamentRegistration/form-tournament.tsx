@@ -16,9 +16,9 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/c
 const formSchema = z.object({
     teamName: z.string().min(4).max(15).regex(/^[a-zA-Z0-9_]+$/i, "Team name should only use alphabet, numbers, and underscore"),
     captainName: z.string().min(3).max(50).regex(/^[a-zA-Z\s]+$/i, "Captain name should only use alphabet and space"),
-    captainPhone: z.string().min(7).max(14).regex(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, "Captain phone number should be valid"),
+    captainPhone: z.string().min(7).max(14).regex(/^\+[0-9]\d{1,14}$/, "Captain phone number should be valid"),
     memberName: z.string().min(3).max(50).regex(/^[a-zA-Z\s]+$/i, "Member name should only use alphabet and space"),
-    memberPhone: z.string().min(7).max(14).regex(/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, "Member phone number should be valid"),
+    memberPhone: z.string().min(7).max(14).regex(/^\+[0-9]\d{1,14}$/, "Member phone number should be valid"),
     captainGender: z.enum(["Man", "Woman"]),
     memberGender: z.enum(["Man", "Woman"]),
 })
